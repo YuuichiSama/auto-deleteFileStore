@@ -17,7 +17,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 """add time im seconds for waitingwaiting before delete 
 1min=60, 2min=60×2=120, 5min=60×5=300"""
-SECONDS = int(os.getenv("SECONDS", "30"))
+SECONDS = int(os.getenv("SECONDS", "600"))
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -89,7 +89,7 @@ async def start_command(client: Client, message: Message):
                 snt_msgs.append(snt_msg)
             except:
                 pass
-        SD = await message.reply_text("Baka! Files will be deleted After 30 seconds. Save them to the Saved Message now!")
+        SD = await message.reply_text("Baka! Files will be deleted After 10 minutes. Save them to the Saved Message now!")
         await asyncio.sleep(SECONDS)
 
         for snt_msg in snt_msgs:
@@ -104,7 +104,7 @@ async def start_command(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('🍁 ᴘʀᴇᴍɪᴜᴍ', url='https://t.me/OtakuFlix_Network/4639')
+                    InlineKeyboardButton('🍁 ᴅᴏɴᴀᴛᴇ ᴜs', url='https://t.me/THE_VANQUISHERS/28')
                 ]
             ]
         )
@@ -137,8 +137,8 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink2),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1", url=client.invitelink),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 2", url=client.invitelink2),
         ]
     ]
     try:
