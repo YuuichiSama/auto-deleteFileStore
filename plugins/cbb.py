@@ -10,17 +10,17 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ ᴏᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>𓆰𝒀𝒖𝒖𝒊𝒄𝒉𝒊~𝑺𝒂𝒎𝒂𓂀</a>\n○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : <a href='https://telegra.ph/file/220bc38696e912c4ad81a.mp4'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n○ ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/Animes_vq'>ᴀɴɪᴍᴇ ᴜɴɪᴛʏ</a>\n○ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ : <a href='https://t.me/THE_VANQUISHERS'>ᴛʜᴇ ᴠᴀɴϙᴜɪsʜᴇʀs</a>\n○ ᴀɴɪᴍᴇ ᴄʜᴀᴛ : <a href='https://t.me/weebsunity'>ᴡᴇᴇʙs ᴜɴɪᴛʏ</a></b>",
-            disable_web_page_preview = True,
-            reply_markup = InlineKeyboardMarkup(
-                [
-                    [
-                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
-                    InlineKeyboardButton('🍁 ᴅᴏɴᴀᴛᴇ ᴜs', url='https://t.me/THE_VANQUISHERS/28')
-                    ]
-                ]t
-            )
-        )
+    text = f"<b>○ ᴏᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>𓆰𝒀𝒖𝒖𝒊𝒄𝒉𝒊~𝑺ᒪᑌ𓂀</a>\n○ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : <a href='https://telegra.ph/file/220bc38696e912c4ad81a.mp4'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>\n○ ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/Animes_vq'>ᴀɴɪᴍᴇ ᴜɴɪᴛʏ</a>\n○ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ : <a href='https://t.me/THE_VANQUISHERS'>ᴛʜᴇ ᴠᴀɴϙᴜɪsʜᴇʀs</a>\n○ ᴀɴɪᴍᴇ ᴄʜᴀᴛ : <a href='https://t.me/weebsunity'>ᴡᴇᴇʙs ᴜɴɪᴛʏ</a></b>",
+    disable_web_page_preview = True,
+    reply_markup = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
+                InlineKeyboardButton('🍁 ᴅᴏɴᴀᴛᴇ ᴜs', url='https://t.me/THE_VANQUISHERS/28')
+            ]
+        ]
+    )
+)
     elif data == "close":
         await query.message.delete()
         try:
